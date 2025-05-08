@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://b5ohtj58eu04a"]
+
+[ext_resource type="ArrayMesh" uid="uid://cdw262e3xiysr" path="res://addons/kaykit_halloween_bits/Assets/obj/crypt.obj" id="1_i4l7o"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_3y1oh"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_e21km"]
+size = Vector3(6.53491, 7.28656, 0.001)
+
+[node name="crypt" type="StaticBody3D"]
+physics_material_override = SubResource("PhysicsMaterial_3y1oh")
+
+[node name="Crypt" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0272549, 1.19209e-07, 0.0148897)
+mesh = ExtResource("1_i4l7o")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0631104, 1.83078, 0.4995)
+shape = SubResource("BoxShape3D_e21km")
